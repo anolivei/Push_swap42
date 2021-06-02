@@ -6,7 +6,7 @@
 #    By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/19 21:21:36 by anolivei          #+#    #+#              #
-#    Updated: 2021/05/26 23:03:41 by anolivei         ###   ########.fr        #
+#    Updated: 2021/06/02 00:44:18 by anolivei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,22 +31,30 @@ RM = /bin/rm -rf
 all: $(NAME)
 
 $(NAME): $(OBJ) $(LIBFT)
-		$(CC) $(OBJ) $(HEAD) $(CFLAGS) $(LFLAGS) -o $(NAME)
+		@$(CC) $(OBJ) $(HEAD) $(CFLAGS) $(LFLAGS) -o $(NAME)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
-		mkdir -p $(OBJ_DIR)
-		$(CC) $(CFLAGS) $(HEAD) -c $< -o $@
+		@mkdir -p $(OBJ_DIR)
+		@$(CC) $(CFLAGS) $(HEAD) -c $< -o $@
 
 $(LIBFT):
-		make -C $(LIBFT_DIR)
+		@make -C $(LIBFT_DIR)
+
+debug_mac: $(OBJ) $(LIBFT)
+		@gcc $(LFLAGS) $(HEAD) $(SRC) $(CFLAGS) -o "push_swap_debug"
+
+debug_linux:
+		@gdd $(LFLAGS) $(HEAD) $(SRC) $(CFLAGS) -o "push_swap_debug"
 
 clean:
-		make clean -C $(LIBFT_DIR)
-		$(RM) $(OBJ_DIR)
+		@make clean -C $(LIBFT_DIR)
+		@$(RM) $(OBJ_DIR)
 
 fclean: clean
-		make fclean -C $(LIBFT_DIR)
-		$(RM) $(NAME)
+		@make fclean -C $(LIBFT_DIR)
+		@$(RM) $(NAME)
+		@$(RM) push_swap_debug
+		@$(RM) push_swap_debug.dSYM
 
 re: fclean all
 
