@@ -33,10 +33,24 @@ Status
 
 ## About ##
 
-- This project aims to sort data on a stack, with a limited set of instructions, using the lowest possible number of actions, manipulating various types of algorithms and choosing the one (of many) most appropriate solution for an optimized data sorting.
+- Push_swap is an algorithm project at school 42.
+- We start with two stacks called A and B.
+- A is filled with some random integers (without duplicates) and B is empty.
+- We can perform a limited set of instructions on these stacks and the goal is to sort all these integers using the lowest possible number of actions.
+- The limited set of instructions are:<br>
+sa (swap a) : Swap the top two numbers in A<br>
+sb (swap b) : Swap the top two numbers in B<br>
+ss : sa + sb<br>
+ra (rotate a) : Top number in A goes to bottom of A<br>
+rb (rotate b) : Top number in B goes to bottom of B<br>
+rr : ra + rb<br>
+rra (reverse rotate a) : Bottom number in A goes to top of A<br>
+rra (reverse rotate b) : Bottom number in B goes to top of B<br>
+rrr : rra + rrb<br>
+pa (push a) : Top number in B goes to top of A<br>
+pb (push b) : Top number in A goes to top of B<br>
 - [Notion](http://bit.ly/push_swap)
 - [Subject](https://github.com/anolivei/Push_swap42/blob/main/en.subject.pdf)
-
 ## Technologies ##
 
 The following tools were used in this project:
