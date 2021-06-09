@@ -1,4 +1,4 @@
-<h1 align="center">Push_Swap 42</h1>
+<h1 align="center">Push_swap</h1>
 
 <h2 align="center">
 Because Swap_push isn’t as natural
@@ -26,7 +26,6 @@ Status
   <a href="#technologies">Technologies</a> &#xa0; | &#xa0;
   <a href="#requirements">Requirements</a> &#xa0; | &#xa0;
   <a href="#starting">Starting</a> &#xa0; | &#xa0;
-  <a href="#understanding-Better">To Understand Better</a> &#xa0; | &#xa0;
   <a href="https://github.com/anolivei" target="_blank">Author</a>
 </p>
 
