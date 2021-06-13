@@ -6,7 +6,7 @@
 #    By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/19 21:21:36 by anolivei          #+#    #+#              #
-#    Updated: 2021/06/02 00:44:18 by anolivei         ###   ########.fr        #
+#    Updated: 2021/06/12 15:09:34 by anolivei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,6 +17,7 @@ LIBFT_DIR = libft
 LIBFT = $(LIBFT_DIR)/libft.a
 
 SRC =	$(SRC_DIR)/main.c \
+		$(SRC_DIR)/is_integer.c \
 		$(SRC_DIR)/sa.c \
 		$(SRC_DIR)/sb.c
 

@@ -3,20 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anolivei <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/26 20:37:31 by anolivei          #+#    #+#             */
-/*   Updated: 2020/01/31 20:50:40 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/06/13 16:46:02 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		count_words(const char *s, char c)
+static int	count_words(const char *s, char c)
 {
-	int i;
-	int n_word;
-	int control;
+	int	i;
+	int	n_word;
+	int	control;
 
 	i = 0;
 	control = 0;
@@ -35,13 +35,13 @@ static int		count_words(const char *s, char c)
 	return (n_word);
 }
 
-static char		*string(const char *s, int init, int end)
+static char	*string(const char *s, int init, int end)
 {
 	char	*string;
 	int		i;
 
 	i = 0;
-	string = (char*)malloc((end - init + 1) * sizeof(char));
+	string = (char *)malloc((end - init + 1) * sizeof(char));
 	while (end > init)
 	{
 		string[i] = s[init];
@@ -52,7 +52,7 @@ static char		*string(const char *s, int init, int end)
 	return (string);
 }
 
-char			**ft_split(char const *s, char c)
+char	**ft_split(char const *s, char c)
 {
 	char	**split;
 	int		init_w;

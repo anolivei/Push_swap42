@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anolivei <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 18:36:26 by anolivei          #+#    #+#             */
-/*   Updated: 2020/01/28 18:34:21 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/06/13 16:34:56 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	char *aux_dst;
-	char *aux_src;
+	char	*aux_dst;
+	char	*aux_src;
 
 	aux_dst = dst;
 	aux_src = (char *)src;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anolivei <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/28 19:24:29 by anolivei          #+#    #+#             */
-/*   Updated: 2020/01/29 01:07:43 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/06/13 16:31:17 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	count_digits(int n)
 {
-	int n_digits;
+	int	n_digits;
 
 	n_digits = 0;
 	if (n < 0)
@@ -29,7 +29,7 @@ static int	count_digits(int n)
 
 static int	power(int n_digits)
 {
-	int p10;
+	int	p10;
 
 	p10 = 1;
 	while (n_digits > 0)
@@ -40,13 +40,14 @@ static int	power(int n_digits)
 	return (p10);
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*itoa;
 	int		p10;
 	int		i;
 
-	if (!(itoa = (char *)malloc((count_digits(n) + 2) * sizeof(char))))
+	itoa = (char *)malloc((count_digits(n) + 2) * sizeof(char));
+	if (!itoa)
 		return (NULL);
 	if (n == -2147483648)
 		return (ft_substr("-2147483648", 0, 11));

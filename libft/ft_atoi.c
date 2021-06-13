@@ -3,22 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anolivei <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/20 20:07:45 by anolivei          #+#    #+#             */
-/*   Updated: 2020/01/26 04:43:19 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/06/13 16:25:41 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_atoi(const char *str)
 {
-	int i;
-	int n;
-	int count_minus;
+	int	i;
+	int	n;
+	int	count_minus;
 
 	i = 0;
-	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\r' ||
-			str[i] == '\v' || str[i] == '\f' || str[i] == ' ')
+	while (str[i] == '\t' || str[i] == '\n' || str[i] == '\r'
+		|| str[i] == '\v' || str[i] == '\f' || str[i] == ' ')
 		i++;
 	count_minus = 0;
 	if (str[i] == '-' || str[i] == '+')

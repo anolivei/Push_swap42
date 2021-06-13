@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anolivei <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/23 23:42:31 by anolivei          #+#    #+#             */
-/*   Updated: 2020/01/30 02:19:39 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/06/13 16:34:19 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 {
-	size_t count_d;
-	size_t count_s;
-	size_t sum;
-	size_t put;
+	size_t	count_d;
+	size_t	count_s;
+	size_t	sum;
+	size_t	put;
 
 	count_d = ft_strlen(dst);
 	count_s = ft_strlen(src);

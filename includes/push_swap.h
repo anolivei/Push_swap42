@@ -6,7 +6,7 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 20:08:36 by anolivei          #+#    #+#             */
-/*   Updated: 2021/05/26 20:59:56 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/06/13 16:21:55 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,12 @@
 
 # include "libft.h"
 # include <stdio.h>
+# include <stdbool.h>
+# include <limits.h>
+
+/*
+** Functions
+*/
+int	is_integer(char *argv);
 
 #endif
