@@ -6,7 +6,7 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 19:07:27 by anolivei          #+#    #+#             */
-/*   Updated: 2021/06/23 23:07:59 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/06/27 20:27:54 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static void	error(void)
 {
 	ft_putstr_fd("Error\n", 1);
-	exit(1);
+	exit(true);
 }
 
 static int	validate_args(int argc, char **argv)
@@ -37,7 +37,7 @@ static int	validate_args(int argc, char **argv)
 
 static void	transform_args(int argc, char **argv, int *num)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (i < argc)
@@ -45,6 +45,29 @@ static void	transform_args(int argc, char **argv, int *num)
 		num[i] = ft_atoi(argv[i]);
 		i++;
 	}
+}
+
+static int	check_duplicates(int argc, int *num)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (i < argc)
+	{
+		j = i + 1;
+		while (j < argc)
+		{
+			if (num[i] == num[j])
+			{
+				error();
+				return (true);
+			}
+			j++;
+		}
+		i++;
+	}
+	return (false);
 }
 
 int	main(int argc, char **argv)
@@ -56,13 +79,14 @@ int	main(int argc, char **argv)
 	argv++;
 	num = malloc(sizeof(int) * argc);
 	if (!num)
-		return(false);
+		return (false);
 	validate_args(argc, argv);
 	transform_args(argc, argv, num);
+	check_duplicates(argc, num);
 	i = 0;
 	while (i < argc)
 	{
-		printf("%i, ", num[i]);
+		printf("%i ", num[i]);
 		i++;
 	}
 	free(num);
