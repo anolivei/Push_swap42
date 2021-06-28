@@ -6,7 +6,7 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 19:07:27 by anolivei          #+#    #+#             */
-/*   Updated: 2021/06/27 20:27:54 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/06/27 21:26:59 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,7 @@ int	main(int argc, char **argv)
 		printf("%i ", num[i]);
 		i++;
 	}
+	printf("\n");
 	free(num);
 	num = NULL;
 	return (true);
