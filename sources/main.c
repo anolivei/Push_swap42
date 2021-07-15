@@ -6,7 +6,7 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 19:07:27 by anolivei          #+#    #+#             */
-/*   Updated: 2021/06/27 21:26:59 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/07/14 23:40:07 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ static void	transform_args(int argc, char **argv, int *num)
 	}
 }
 
-static int	check_duplicates(int argc, int *num)
+static bool	check_duplicates(int argc, int *num)
 {
 	int	i;
 	int	j;
@@ -72,7 +72,7 @@ static int	check_duplicates(int argc, int *num)
 
 int	main(int argc, char **argv)
 {
-	int	i;
+	printf("%d", argc);
 	int	*num;
 
 	argc--;
@@ -83,13 +83,6 @@ int	main(int argc, char **argv)
 	validate_args(argc, argv);
 	transform_args(argc, argv, num);
 	check_duplicates(argc, num);
-	i = 0;
-	while (i < argc)
-	{
-		printf("%i ", num[i]);
-		i++;
-	}
-	printf("\n");
 	free(num);
 	num = NULL;
 	return (true);

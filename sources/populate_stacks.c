@@ -1,34 +1,13 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   populate_stacks.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/26 20:08:36 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/14 23:11:41 by anolivei         ###   ########.fr       */
+/*   Created: 2021/07/13 23:44:44 by anolivei          #+#    #+#             */
+/*   Updated: 2021/07/14 23:18:46 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
-
-# include "libft.h"
-# include <stdio.h>
-# include <stdbool.h>
-# include <limits.h>
-
-/*
-** Functions
-*/
-int		is_integer(char *argv);
-
-typedef struct			s_pslist
-{
-	int					num;
-	int					index;
-	struct s_stack		*previous;
-	struct s_stack		*next;
-}						t_pslist;
-
-#endif
+#include "push_swap.h"
