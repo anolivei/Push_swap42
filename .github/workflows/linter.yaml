@@ -1,6 +1,6 @@
 name: norminette
 
-on: pull_request
+on: push
  
 jobs:
   linter:
