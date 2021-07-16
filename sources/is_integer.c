@@ -6,7 +6,7 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/12 15:07:54 by anolivei          #+#    #+#             */
-/*   Updated: 2021/06/13 16:13:24 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/07/16 00:22:22 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ int	is_integer(char *argv)
 		if (!ft_isdigit(argv[i]))
 			return (false);
 		num = num * 10 + argv[i] - '0';
-		if (negative == true && -num < INT_MIN)
+		if (negative == true && - num < INT_MIN)
 			return (false);
 		if (negative == false && num > INT_MAX)
 			return (false);
