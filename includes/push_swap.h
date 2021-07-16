@@ -6,7 +6,7 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 20:08:36 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/15 23:36:25 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/07/15 23:43:58 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 */
 int		is_integer(char *argv);
 
-typedef struct s_pslist
+typedef struct	s_pslist
 {
 	int					num;
 	int					index;
