@@ -6,7 +6,7 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 19:07:27 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/14 23:40:07 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/07/14 23:47:30 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,6 @@ static bool	check_duplicates(int argc, int *num)
 
 int	main(int argc, char **argv)
 {
-	printf("%d", argc);
 	int	*num;
 
 	argc--;

@@ -73,8 +73,18 @@ $ cd Push_swap42
 $ make
 
 # Run the project
-$ ./push_swap
+$ ./push_swap 5 8 7 2
 
 ```
+
+To test (you must use bash terminal)
+```bash
+# on linux OS
+ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker_linux $ARG
+
+# on Mac OS
+RG="4 67 3 87 23"; ./push_swap $ARG | ./checker_Mac $ARG
+```
+
 &#xa0;
 <a href="#top">Back to top</a>
