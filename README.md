@@ -1,4 +1,4 @@
-[![norminette](https://github.com/anolivei/Push_swap42/actions/workflows/linter.yaml/badge.svg?event=check_run)](https://github.com/anolivei/Push_swap42/actions/workflows/linter.yaml)
+
 
 <h1 align="center">Push_swap</h1>
 
@@ -12,6 +12,7 @@ Because Swap_push isn’t as natural
   <img alt="Github language count" src="https://img.shields.io/github/languages/count/anolivei/Push_swap42?color=56BEB8">
 
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/anolivei/Push_swap42?color=56BEB8">
+  <img alt="Norminette" src="https://github.com/anolivei/Push_swap42/actions/workflows/linter.yaml/badge.svg">
 
 </p>
 
