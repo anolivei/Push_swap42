@@ -7,12 +7,13 @@ Because Swap_push isn’t as natural
 </h2> 
 
 <p align="center">
-  <img alt="Github top language" src="https://img.shields.io/github/languages/top/anolivei/Push_swap42?color=56BEB8">
+  <img alt="Github top language" src="https://img.shields.io/github/languages/top/anolivei/Push_swap42?color=3de069">
 
-  <img alt="Github language count" src="https://img.shields.io/github/languages/count/anolivei/Push_swap42?color=56BEB8">
+  <img alt="Github language count" src="https://img.shields.io/github/languages/count/anolivei/Push_swap42?color=3de069">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/anolivei/Push_swap42?color=56BEB8">
-  <img alt="Norminette" src="https://github.com/anolivei/Push_swap42/actions/workflows/linter.yaml/badge.svg">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/anolivei/Push_swap42?color=3de069">
+
+  <img alt="Norminette" src="https://github.com/anolivei/Push_swap42/actions/workflows/linter.yaml/badge.svg?event=push">
 
 </p>
 
