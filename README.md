@@ -1,3 +1,5 @@
+[![norminette](https://github.com/anolivei/Push_swap42/actions/workflows/linter.yaml/badge.svg?event=check_run)](https://github.com/anolivei/Push_swap42/actions/workflows/linter.yaml)
+
 <h1 align="center">Push_swap</h1>
 
 <h2 align="center">
