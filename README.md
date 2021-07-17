@@ -27,10 +27,10 @@ Status
 
 <p align="center">
   <a href="#about">About</a> &#xa0; | &#xa0;
-   <a href="#links">Links</a> &#xa0; | &#xa0;
-  <a href="#technologies">Technologies</a> &#xa0; | &#xa0;
+  <a href="#links">Links</a> &#xa0; | &#xa0;
+  <a href="#functions">Functions</a> &#xa0; | &#xa0;
   <a href="#starting">Starting</a> &#xa0; | &#xa0;
-   <a href="#testing">Testing</a> &#xa0; | &#xa0;
+  <a href="#testing">Testing</a> &#xa0; | &#xa0;
   <a href="https://github.com/anolivei" target="_blank">Author</a>
 </p>
 
@@ -61,8 +61,8 @@ pb (push b) : Top number in A goes to top of B<br>
 
 - [Lfrasson Tester](https://github.com/laisarena/push_swap_tester) (thank you for this amazing tester!)
 
-## Authorized Functions ##
-
+## Functions ##
+Only the following functions are allowed to be used int this project:
 - write
 - read
 - malloc
@@ -97,7 +97,7 @@ ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker_linux $ARG
 RG="4 67 3 87 23"; ./push_swap $ARG | ./checker_Mac $ARG
 
 # lfrasson tester
-./lfrasson_tester.sh
+bash lfrasson_tester.sh
 ```
 
 &#xa0;

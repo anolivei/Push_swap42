@@ -1,33 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   fill_stack_a.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/26 19:07:27 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/17 02:17:08 by anolivei         ###   ########.fr       */
+/*   Created: 2021/07/17 01:34:53 by anolivei          #+#    #+#             */
+/*   Updated: 2021/07/17 02:42:50 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char **argv)
+void	fill_stack(t_all *all)
 {
-	t_all	all;
-	int		*num;
+	int		i;
+	t_stack	*lst;
 
-	argc--;
-	argv++;
-	num = malloc(sizeof(int) * argc);
-	if (!num)
-		return (false);
-	validate_args(argc, argv);
-	transform_args(argc, argv, num);
-	check_duplicates(argc, num);
-	init_struct(&all, num, argc);
-	fill_stack(&all);
-	free(num);
-	num = NULL;
-	return (true);
+	i = all->len - 1;
+	all->a = ps_lstnew(all->num[i]);
+	while (i > 0)
+	{
+		i--;
+		ps_lstadd_back(&all->a, ps_lstnew(all->num[i]));
+	}
+	lst = all->a;
+	while (lst)
+	{
+		printf("%i ", lst->content);
+		lst = lst->next;
+	}
+	printf("\n");
+	lst = all->a;
+	while (lst)
+	{
+		printf("%i ", lst->content);
+		lst = lst->previous;
+	}
 }
