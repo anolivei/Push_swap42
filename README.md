@@ -27,9 +27,10 @@ Status
 
 <p align="center">
   <a href="#about">About</a> &#xa0; | &#xa0;
+   <a href="#links">Links</a> &#xa0; | &#xa0;
   <a href="#technologies">Technologies</a> &#xa0; | &#xa0;
-  <a href="#requirements">Requirements</a> &#xa0; | &#xa0;
   <a href="#starting">Starting</a> &#xa0; | &#xa0;
+   <a href="#testing">Testing</a> &#xa0; | &#xa0;
   <a href="https://github.com/anolivei" target="_blank">Author</a>
 </p>
 
@@ -37,7 +38,7 @@ Status
 
 ## About ##
 
-- Push_swap is an algorithm project at school 42.
+- Push_swap is an algorithm project at school 42 and the instructions were given in the [subject](https://github.com/anolivei/Push_swap42/blob/main/en.subject.pdf).
 - We start with two stacks called A and B.
 - A is filled with some random integers (without duplicates) and B is empty.
 - We can perform a limited set of instructions on these stacks and the goal is to sort all these integers using the lowest possible number of actions.
@@ -53,20 +54,24 @@ rra (reverse rotate b) : Bottom number in B goes to top of B<br>
 rrr : rra + rrb<br>
 pa (push a) : Top number in B goes to top of A<br>
 pb (push b) : Top number in A goes to top of B<br>
+
+## Links ##
+
 - [Notion](http://bit.ly/push_swap)
-- [Subject](https://github.com/anolivei/Push_swap42/blob/main/en.subject.pdf)
-## Technologies ##
 
-The following tools were used in this project:
+- [Lfrasson Tester](https://github.com/laisarena/push_swap_tester) (thank you for this amazing tester!)
 
+## Authorized Functions ##
 
-## Requirements ##
-
-Before starting you need to have: [Git](https://git-scm.com)
+- write
+- read
+- malloc
+- free
+- exit
 
 ## Starting ##
 
-```shell
+```bash
 # Clone this project
 $ git clone https://github.com/anolivei/Push_swap42
 
@@ -81,13 +86,18 @@ $ ./push_swap 5 8 7 2
 
 ```
 
-To test (you must use bash terminal)
+## Testing ##
+
+obs: you must use bash terminal
 ```bash
 # on linux OS
 ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker_linux $ARG
 
 # on Mac OS
 RG="4 67 3 87 23"; ./push_swap $ARG | ./checker_Mac $ARG
+
+# lfrasson tester
+./lfrasson_tester.sh
 ```
 
 &#xa0;

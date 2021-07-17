@@ -6,7 +6,7 @@
 #    By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/19 21:21:36 by anolivei          #+#    #+#              #
-#    Updated: 2021/07/14 23:10:27 by anolivei         ###   ########.fr        #
+#    Updated: 2021/07/17 00:32:52 by anolivei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,9 +17,12 @@ LIBFT_DIR = libft
 LIBFT = $(LIBFT_DIR)/libft.a
 
 SRC =	$(SRC_DIR)/main.c \
+		$(SRC_DIR)/check_args.c \
 		$(SRC_DIR)/is_integer.c \
+		$(SRC_DIR)/init_struct.c \
 		$(SRC_DIR)/sa.c \
-		$(SRC_DIR)/sb.c
+		$(SRC_DIR)/sb.c \
+		$(SRC_DIR)/exit.c
 
 OBJ = $(patsubst $(SRC_DIR)%.c, $(OBJ_DIR)%.o, $(SRC))
 
