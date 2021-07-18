@@ -6,7 +6,7 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 20:08:36 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/17 02:41:32 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/07/18 04:15:54 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@
 typedef struct s_stack
 {
 	int					content;
-	struct s_stack		*previous;
 	struct s_stack		*next;
 }						t_stack;
 
@@ -48,12 +47,20 @@ bool	check_duplicates(int argc, int *num);
 void	transform_args(int argc, char **argv, int *num);
 
 void	init_struct(t_all *all, int *num, int argc);
-void	fill_stack(t_all *all);
+void	fill_stack_a(t_all *all);
 
 void	exit_error(void);
 
 t_stack	*ps_lstnew(int content);
 void	ps_lstadd_back(t_stack **lst, t_stack *next);
 t_stack	*ps_lstlast(t_stack *lst);
+void	ps_lstdelone(t_stack *lst, void (*del)(void *));
+
+void	print_stacks(t_stack *stack);
+void	ft_del(int *content);
+
+void	sa(t_all *all);
+void	sb(t_all *all);
+void	ra(t_all *all);
 
 #endif

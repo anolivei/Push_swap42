@@ -6,16 +6,15 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/17 01:34:53 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/17 02:42:50 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/07/18 04:22:07 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	fill_stack(t_all *all)
+void	fill_stack_a(t_all *all)
 {
-	int		i;
-	t_stack	*lst;
+	int	i;
 
 	i = all->len - 1;
 	all->a = ps_lstnew(all->num[i]);
@@ -24,17 +23,19 @@ void	fill_stack(t_all *all)
 		i--;
 		ps_lstadd_back(&all->a, ps_lstnew(all->num[i]));
 	}
-	lst = all->a;
-	while (lst)
+	print_stacks(all->a);
+}
+
+void	print_stacks(t_stack *stack)
+{
+	t_stack	*tmp;
+
+	tmp = stack;
+	while (tmp)
 	{
-		printf("%i ", lst->content);
-		lst = lst->next;
+		printf("%d ", tmp->content);
+		tmp = tmp->next;
 	}
 	printf("\n");
-	lst = all->a;
-	while (lst)
-	{
-		printf("%i ", lst->content);
-		lst = lst->previous;
-	}
+	free(tmp);
 }

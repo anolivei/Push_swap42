@@ -6,7 +6,7 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 19:07:27 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/17 02:17:08 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/07/18 03:34:34 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,10 @@ int	main(int argc, char **argv)
 	transform_args(argc, argv, num);
 	check_duplicates(argc, num);
 	init_struct(&all, num, argc);
-	fill_stack(&all);
+	fill_stack_a(&all);
+	sa(&all);
+	sb(&all);
+	ra(&all);
 	free(num);
 	num = NULL;
 	return (true);

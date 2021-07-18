@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sa.c                                               :+:      :+:    :+:   */
+/*   ra.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/01 19:42:09 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/18 04:22:19 by anolivei         ###   ########.fr       */
+/*   Created: 2021/07/18 03:31:38 by anolivei          #+#    #+#             */
+/*   Updated: 2021/07/18 04:24:06 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sa(t_all *all)
+void	ra(t_all *all)
 {
-	int	a;
-	int	b;
-
-	if (all->a)
-	{
-		a = all->a->content;
-		b = all->a->next->content;
-		all->a->content = b;
-		all->a->next->content = a;
-		ft_putstr_fd("sa\n", 1);
-		print_stacks(all->a);
-	}
+	ps_lstadd_back(&all->a, ps_lstnew(all->a->content));
+	all->a = all->a->next;
+	ft_putstr_fd("ra\n", 1);
+	print_stacks(all->a);
 }
