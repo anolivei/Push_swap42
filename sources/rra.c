@@ -1,44 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fill_stack_a.c                                     :+:      :+:    :+:   */
+/*   rra.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/17 01:34:53 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/18 17:51:23 by anolivei         ###   ########.fr       */
+/*   Created: 2021/07/18 15:46:36 by anolivei          #+#    #+#             */
+/*   Updated: 2021/07/18 17:52:12 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	fill_stack_a(t_all *all)
+void	rra(t_all *all)
 {
-	int	i;
+	t_stack	node;
+	t_stack	*lst;
 
-	if (all->len)
+	if (all->a)
 	{
-		i = all->len - 1;
-		all->a = ps_lstnew(all->num[i]);
-		while (i > 0)
-		{
-			i--;
-			ps_lstadd_back(&all->a, ps_lstnew(all->num[i]));
-		}
+		node = *all->a;
+		lst = ps_lstlast(all->a);
+		all->a = ps_lstprevlast(all->a);
+		all->a->next = NULL;
+		all->a = &node;
+		ps_lstadd_front(&all->a, ps_lstnew(lst->content));
+		ft_putstr_fd("rra\n", 1);
 		print_stacks(all->a);
 	}
-}
-
-void	print_stacks(t_stack *stack)
-{
-	t_stack	*tmp;
-
-	tmp = stack;
-	while (tmp)
-	{
-		printf("%d ", tmp->content);
-		tmp = tmp->next;
-	}
-	printf("\n");
-	free(tmp);
 }

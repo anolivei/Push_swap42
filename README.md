@@ -94,7 +94,7 @@ obs: you must use bash terminal
 ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker_linux $ARG
 
 # on Mac OS
-RG="4 67 3 87 23"; ./push_swap $ARG | ./checker_Mac $ARG
+ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker_Mac $ARG
 
 # lfrasson tester
 bash lfrasson_tester.sh

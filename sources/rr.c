@@ -1,44 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fill_stack_a.c                                     :+:      :+:    :+:   */
+/*   rr.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/17 01:34:53 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/18 17:51:23 by anolivei         ###   ########.fr       */
+/*   Created: 2021/07/18 15:43:12 by anolivei          #+#    #+#             */
+/*   Updated: 2021/07/18 17:53:54 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	fill_stack_a(t_all *all)
+void	rr(t_all *all)
 {
-	int	i;
-
-	if (all->len)
-	{
-		i = all->len - 1;
-		all->a = ps_lstnew(all->num[i]);
-		while (i > 0)
-		{
-			i--;
-			ps_lstadd_back(&all->a, ps_lstnew(all->num[i]));
-		}
-		print_stacks(all->a);
-	}
-}
-
-void	print_stacks(t_stack *stack)
-{
-	t_stack	*tmp;
-
-	tmp = stack;
-	while (tmp)
-	{
-		printf("%d ", tmp->content);
-		tmp = tmp->next;
-	}
-	printf("\n");
-	free(tmp);
+	ra(all);
+	rb(all);
+	ft_putstr_fd("rr\n", 1);
 }

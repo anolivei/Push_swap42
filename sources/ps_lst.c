@@ -6,7 +6,7 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/17 01:40:32 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/18 04:18:09 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/07/18 16:00:45 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,4 +42,19 @@ void	ps_lstadd_back(t_stack **lst, t_stack *next)
 		last->next = next;
 	else
 		*lst = next;
+}
+
+t_stack	*ps_lstprevlast(t_stack *lst)
+{
+	if (lst == 0)
+		return (0);
+	while (lst->next->next != 0)
+		lst = lst->next;
+	return (lst);
+}
+
+void	ps_lstadd_front(t_stack **lst, t_stack *new)
+{
+	new->next = *lst;
+	*lst = new;
 }

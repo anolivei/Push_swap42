@@ -1,44 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fill_stack_a.c                                     :+:      :+:    :+:   */
+/*   rrb.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/17 01:34:53 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/18 17:51:23 by anolivei         ###   ########.fr       */
+/*   Created: 2021/07/18 16:13:53 by anolivei          #+#    #+#             */
+/*   Updated: 2021/07/18 17:52:29 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	fill_stack_a(t_all *all)
+void	rrb(t_all *all)
 {
-	int	i;
+	t_stack	node;
+	t_stack	*lst;
 
-	if (all->len)
+	if (all->b)
 	{
-		i = all->len - 1;
-		all->a = ps_lstnew(all->num[i]);
-		while (i > 0)
-		{
-			i--;
-			ps_lstadd_back(&all->a, ps_lstnew(all->num[i]));
-		}
-		print_stacks(all->a);
+		node = *all->b;
+		lst = ps_lstlast(all->b);
+		all->b = ps_lstprevlast(all->b);
+		all->b->next = NULL;
+		all->b = &node;
+		ps_lstadd_front(&all->b, ps_lstnew(lst->content));
+		ft_putstr_fd("rrb\n", 1);
+		print_stacks(all->b);
 	}
-}
-
-void	print_stacks(t_stack *stack)
-{
-	t_stack	*tmp;
-
-	tmp = stack;
-	while (tmp)
-	{
-		printf("%d ", tmp->content);
-		tmp = tmp->next;
-	}
-	printf("\n");
-	free(tmp);
 }

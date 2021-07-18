@@ -1,44 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fill_stack_a.c                                     :+:      :+:    :+:   */
+/*   rb.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/17 01:34:53 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/18 17:51:23 by anolivei         ###   ########.fr       */
+/*   Created: 2021/07/18 14:21:32 by anolivei          #+#    #+#             */
+/*   Updated: 2021/07/18 17:51:49 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	fill_stack_a(t_all *all)
+void	rb(t_all *all)
 {
-	int	i;
-
-	if (all->len)
+	if (all->b)
 	{
-		i = all->len - 1;
-		all->a = ps_lstnew(all->num[i]);
-		while (i > 0)
-		{
-			i--;
-			ps_lstadd_back(&all->a, ps_lstnew(all->num[i]));
-		}
-		print_stacks(all->a);
+		ps_lstadd_back(&all->b, ps_lstnew(all->b->content));
+		all->b = all->b->next;
+		ft_putstr_fd("rb\n", 1);
+		print_stacks(all->b);
 	}
-}
-
-void	print_stacks(t_stack *stack)
-{
-	t_stack	*tmp;
-
-	tmp = stack;
-	while (tmp)
-	{
-		printf("%d ", tmp->content);
-		tmp = tmp->next;
-	}
-	printf("\n");
-	free(tmp);
 }

@@ -6,7 +6,7 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 19:07:27 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/18 03:34:34 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/07/18 17:57:08 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,12 @@ int	main(int argc, char **argv)
 	sa(&all);
 	sb(&all);
 	ra(&all);
+	rb(&all);
+	rra(&all);
+	rrb(&all);
+	ss(&all);
+	rr(&all);
+	rrr(&all);
 	free(num);
 	num = NULL;
 	return (true);

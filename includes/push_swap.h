@@ -6,7 +6,7 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 20:08:36 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/18 04:15:54 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/07/18 17:56:04 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,12 +55,20 @@ t_stack	*ps_lstnew(int content);
 void	ps_lstadd_back(t_stack **lst, t_stack *next);
 t_stack	*ps_lstlast(t_stack *lst);
 void	ps_lstdelone(t_stack *lst, void (*del)(void *));
+t_stack	*ps_lstprevlast(t_stack *lst);
+void	ps_lstadd_front(t_stack **lst, t_stack *new);
 
 void	print_stacks(t_stack *stack);
 void	ft_del(int *content);
 
 void	sa(t_all *all);
 void	sb(t_all *all);
+void	ss(t_all *all);
 void	ra(t_all *all);
+void	rb(t_all *all);
+void	rr(t_all *all);
+void	rra(t_all *all);
+void	rrb(t_all *all);
+void	rrr(t_all *all);
 
 #endif
