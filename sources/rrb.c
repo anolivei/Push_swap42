@@ -6,7 +6,7 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/18 16:13:53 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/18 17:52:29 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/07/18 22:54:14 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,24 @@
 
 void	rrb(t_all *all)
 {
-	t_stack	node;
-	t_stack	*lst;
+	t_stack	*prev_last;
+	t_stack	*last;
 
 	if (all->b)
 	{
-		node = *all->b;
-		lst = ps_lstlast(all->b);
-		all->b = ps_lstprevlast(all->b);
-		all->b->next = NULL;
-		all->b = &node;
-		ps_lstadd_front(&all->b, ps_lstnew(lst->content));
-		ft_putstr_fd("rrb\n", 1);
+		last = all->b;
+		prev_last = NULL;
+		while (last->next != NULL)
+		{
+			prev_last = last;
+			last = last->next;
+		}
+		prev_last->next = NULL;
+		last->next = all->b;
+		all->b = last;
+		ft_putstr_fd("rra\n", 1);
 		print_stacks(all->b);
 	}
+	else
+		ft_putstr_fd("no stack_b\n", 1);
 }

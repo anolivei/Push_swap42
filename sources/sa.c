@@ -6,7 +6,7 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/01 19:42:09 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/18 04:22:19 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/07/18 20:25:39 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,4 +26,6 @@ void	sa(t_all *all)
 		ft_putstr_fd("sa\n", 1);
 		print_stacks(all->a);
 	}
+	else
+		ft_putstr_fd("no stack_a\n", 1);
 }

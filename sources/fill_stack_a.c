@@ -6,7 +6,7 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/17 01:34:53 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/18 17:51:23 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/07/18 23:00:05 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,4 @@ void	print_stacks(t_stack *stack)
 		tmp = tmp->next;
 	}
 	printf("\n");
-	free(tmp);
 }

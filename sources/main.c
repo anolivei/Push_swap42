@@ -6,7 +6,7 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 19:07:27 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/18 17:57:08 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/07/18 23:00:31 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,13 @@ int	main(int argc, char **argv)
 	init_struct(&all, num, argc);
 	fill_stack_a(&all);
 	sa(&all);
+	ss(&all);
 	sb(&all);
 	ra(&all);
-	rb(&all);
+	rr(&all);
 	rra(&all);
 	rrb(&all);
-	ss(&all);
-	rr(&all);
+	rb(&all);
 	rrr(&all);
 	free(num);
 	num = NULL;
