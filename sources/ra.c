@@ -6,7 +6,7 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/18 03:31:38 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/18 14:27:58 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/07/20 00:24:41 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,18 @@
 
 void	ra(t_all *all)
 {
+	t_stack	*first;
+	t_stack	*last;
+
 	if (all->a)
 	{
-		ps_lstadd_back(&all->a, ps_lstnew(all->a->content));
-		all->a = all->a->next;
+		first = all->a;
+		last = all->a;
+		while (last->next != NULL)
+			last = last->next;
+		all->a = first->next;
+		first->next = NULL;
+		last->next = first;
 		ft_putstr_fd("ra\n", 1);
 		print_stacks(all->a);
 	}

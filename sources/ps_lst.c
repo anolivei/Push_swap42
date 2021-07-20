@@ -6,7 +6,7 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/17 01:40:32 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/18 16:00:45 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/07/20 00:38:45 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_stack	*ps_lstnew(int content)
 {
 	t_stack	*new_element;
 
-	new_element = (t_stack *)malloc(1 * sizeof(t_stack));
+	new_element = (t_stack *)malloc(sizeof(t_stack));
 	if (new_element == NULL)
 		return (NULL);
 	new_element->content = content;

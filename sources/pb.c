@@ -1,32 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rb.c                                               :+:      :+:    :+:   */
+/*   pb.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/07/18 14:21:32 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/20 00:37:40 by anolivei         ###   ########.fr       */
+/*   Created: 2021/07/20 00:13:12 by anolivei          #+#    #+#             */
+/*   Updated: 2021/07/20 00:37:20 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	rb(t_all *all)
+void	pb(t_all *all)
 {
 	t_stack	*first;
-	t_stack	*last;
 
 	if (all->b)
 	{
 		first = all->b;
-		last = all->b;
-		while (last->next != NULL)
-			last = last->next;
 		all->b = first->next;
-		first->next = NULL;
-		last->next = first;
-		ft_putstr_fd("ra\n", 1);
+		first->next = all->a;
+		all->a = first;
+		ft_putstr_fd("pb\n", 1);
+		print_stacks(all->a);
 		print_stacks(all->b);
 	}
 }
