@@ -6,7 +6,7 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/17 01:34:53 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/19 23:28:28 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/07/21 23:23:44 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,15 @@ void	fill_stack_a(t_all *all)
 	}
 }
 
+/*
+** Functions using printf only to test while I am writing the code
+*/
+
 void	print_stacks(t_stack *stack)
 {
 	t_stack	*tmp;
 
+	printf("PRINT STACK\n");
 	tmp = stack;
 	while (tmp)
 	{
@@ -40,4 +45,20 @@ void	print_stacks(t_stack *stack)
 		tmp = tmp->next;
 	}
 	printf("\n");
+	printf("FIM\n");
+}
+
+void	print_vectors(int len, int *num)
+{
+	int	i;
+
+	i = 0;
+	printf("PRINT VECTOR\n");
+	while (i < len)
+	{
+		printf("%d ", num[i]);
+		i++;
+	}
+	printf("\n");
+	printf("FIM\n");
 }

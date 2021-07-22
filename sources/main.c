@@ -6,7 +6,7 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 19:07:27 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/20 00:36:18 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/07/21 23:22:48 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int	main(int argc, char **argv)
 {
 	t_all	all;
 	int		*num;
+	int		*index;
 
 	argc--;
 	argv++;
@@ -41,6 +42,10 @@ int	main(int argc, char **argv)
 	validate_args(argc, argv);
 	transform_args(argc, argv, num);
 	check_duplicates(argc, num);
+	if (array_is_sorted(argc, num))
+		exit(true);
+	index = link_index(argc, num);
+	free(index);
 	init_struct(&all, num, argc);
 	fill_stack_a(&all);
 	tests(&all);
