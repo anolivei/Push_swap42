@@ -6,7 +6,7 @@
 #    By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/19 21:21:36 by anolivei          #+#    #+#              #
-#    Updated: 2021/07/20 22:57:11 by anolivei         ###   ########.fr        #
+#    Updated: 2021/07/22 00:28:29 by anolivei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ SRC =	$(SRC_DIR)/main.c \
 		$(SRC_DIR)/fill_stack_a.c \
 		$(SRC_DIR)/ps_lst.c \
 		$(SRC_DIR)/quick_sort.c \
+		$(SRC_DIR)/ft_itob.c \
 		$(SRC_DIR)/pa.c \
 		$(SRC_DIR)/pb.c \
 		$(SRC_DIR)/sa.c \

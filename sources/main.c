@@ -6,7 +6,7 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 19:07:27 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/22 00:27:50 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/07/23 01:08:58 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,23 @@ static void	tests(t_all *all)
 	pb(all);
 }
 
-static void	freeing(t_all *all, int *num, int *index)
+static void	freeing(t_all *all, int *num, int *index, char **bin)
 {
+	int	i;
+
 	free(index);
 	index = NULL;
 	free(num);
 	num = NULL;
 	ps_lstclear(&all->a);
 	ps_lstclear(&all->b);
+	i = 0;
+	while (i < all->len)
+	{
+		free(bin[i]);
+		i++;
+	}
+	free(bin);
 }
 
 int	main(int argc, char **argv)
@@ -43,6 +52,7 @@ int	main(int argc, char **argv)
 	t_all	all;
 	int		*num;
 	int		*index;
+	char	**bin;
 
 	if (argc == 1)
 		exit(true);
@@ -57,10 +67,10 @@ int	main(int argc, char **argv)
 	if (array_is_sorted(argc, num))
 		exit(true);
 	index = link_index(argc, num);
-	ft_itob(argc, index);
+	bin = string_bin(argc, index);
 	init_struct(&all, num, argc);
 	fill_stack_a(&all);
 	tests(&all);
-	freeing(&all, num, index);
+	freeing(&all, num, index, bin);
 	return (true);
 }

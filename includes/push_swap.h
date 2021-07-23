@@ -6,7 +6,7 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 20:08:36 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/21 23:25:13 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/07/23 01:03:28 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ typedef struct s_all
 	t_stack	*sort;
 	t_stack	*aux_sort;
 
+	char	**bin;
 	int		*num;
 	int		len;
 }			t_all;
@@ -64,8 +65,13 @@ void	ps_lstclear(t_stack **lst);
 
 void	print_stacks(t_stack *stack);
 void	print_vectors(int len, int *num);
+void	print_char_vectors(int len, char **str);
 
 void	ft_del(int *content);
+
+char	*ft_itob(int len, int num);
+char	**string_bin(int len, int *num);
+int		find_limit(int len);
 
 void	pa(t_all *all);
 void	pb(t_all *all);
