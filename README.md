@@ -15,16 +15,6 @@ Because Swap_push isn’t as natural
 
   <img alt="Norminette" src="https://github.com/anolivei/Push_swap42/actions/workflows/linter.yaml/badge.svg?event=push">
 
-</p>
-
-<h2 align="center"> 
-Status
-</h2>
-
-<h4 align="center"> 
-	Push_swap: Under construction...  🚧
-</h4> 
-
 <p align="center">
   <a href="#about">About</a> &#xa0; | &#xa0;
   <a href="#links">Links</a> &#xa0; | &#xa0;
@@ -42,24 +32,32 @@ Status
 - We start with two stacks called A and B.
 - A is filled with some random integers (without duplicates) and B is empty.
 - We can perform a limited set of instructions on these stacks and the goal is to sort all these integers using the lowest possible number of actions.
-- The limited set of instructions are:<br>
-sa (swap a) : Swap the top two numbers in A<br>
-sb (swap b) : Swap the top two numbers in B<br>
-ss : sa + sb<br>
-ra (rotate a) : Top number in A goes to bottom of A<br>
-rb (rotate b) : Top number in B goes to bottom of B<br>
-rr : ra + rb<br>
-rra (reverse rotate a) : Bottom number in A goes to top of A<br>
-rra (reverse rotate b) : Bottom number in B goes to top of B<br>
-rrr : rra + rrb<br>
-pa (push a) : Top number in B goes to top of A<br>
-pb (push b) : Top number in A goes to top of B<br>
+- The limited set of instructions are:
+
+| Operation | Description |
+| ------------ | ------------ |
+| `sa` | swap A - swap the first 2 elements at the top of stack A |
+| `sb` | swap B - swap the first 2 elements at the top of stack B |
+| `ss` | `sa` and `sb` at the same time |
+| `pa` | push A - take the first element at the top of b and put it at the top of A |
+| `pb` | push B - take the first element at the top of a and put it at the top of B |
+| `ra` | rotate A - shift up all elements of stack A by 1. The first element becomes the last one |
+| `rb` | rotate B - shift up all elements of stack B by 1. The first element becomes the last one |
+| `rr` | `ra` and `rb` at the same time |
+| `rra` | reverse rotate A - shift down all elements of stack A by 1. The last element becomes the first one |
+| `rrb` | reverse rotate B - shift down all elements of stack B by 1. The last element becomes the first one |
+| `rrr` | `rra` and `rrb` at the same time |
+
 
 ## Links ##
 
 - [Notion](http://bit.ly/push_swap)
 
 - [Lfrasson Tester](https://github.com/laisarena/push_swap_tester) (thank you for this amazing tester!)
+
+- [Push_swap Visualizer](https://github.com/o-reo/push_swap_visualizer) (you will need python3)
+
+- [Radix Sort](https://medium.com/nerd-for-tech/push-swap-tutorial-fa746e6aba1e) (I used this algorithm in my project)
 
 ## Functions ##
 Only the following functions are allowed to be used int this project:
@@ -98,6 +96,9 @@ ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker_Mac $ARG
 
 # lfrasson tester
 bash lfrasson_tester.sh
+
+# push_swap visualizer
+python3 python_visualizer.py `ruby -e "puts (-200..200).to_a.shuffle.join(' ')"`
 ```
 
 &#xa0;
