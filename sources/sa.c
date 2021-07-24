@@ -6,7 +6,7 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/01 19:42:09 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/24 00:42:18 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/07/24 13:06:05 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,5 @@ void	sa(t_all *all)
 		all->a->content = b;
 		all->a->next->content = a;
 		ft_putstr_fd("sa\n", 1);
-	//	print_stacks(all->a);
 	}
-//	else
-	//	ft_putstr_fd("no stack_a\n", 1);
 }

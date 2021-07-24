@@ -6,20 +6,11 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 22:43:44 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/24 00:43:49 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/07/24 11:36:01 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-/*void	push(t_all *all, int new_content)
-{	
-	all->sort = all->a;
-	all->aux_sort = ps_lstnew(new_content);
-	all->aux_sort->next = all->sort;
-	all->sort = all->aux_sort;
-	print_stacks(all->sort);
-}*/
 
 static int	*cpy_vector(int len, int *num)
 {

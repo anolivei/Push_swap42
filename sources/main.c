@@ -6,7 +6,7 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 19:07:27 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/24 00:30:26 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/07/24 16:40:50 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,8 +71,9 @@ int	main(int argc, char **argv)
 	bin = string_bin(argc, index);
 	init_struct(&all, num, argc);
 	fill_stack_a(&all, bin, index);
+	fill_stack_aux(&all, bin, index);
 //	tests(&all);
-	push_swap(&all);
+	push_swap(&all, index);
 	freeing(&all, num, index, bin);
-	return (true);
+	return (false);
 }

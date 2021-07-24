@@ -6,7 +6,7 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/18 03:31:38 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/24 00:42:38 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/07/24 17:20:12 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,5 @@ void	ra(t_all *all)
 		first->next = NULL;
 		last->next = first;
 		ft_putstr_fd("ra\n", 1);
-	//	print_stacks(all->a);
 	}
 }

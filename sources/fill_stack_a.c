@@ -6,7 +6,7 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/17 01:34:53 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/24 01:15:19 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/07/24 17:29:20 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@ void	fill_stack_a(t_all *all, char **bin, int *index)
 
 	if (all->len)
 	{
-	//	printf("LEN %d\n", all->len);
 		i = 0;
 		all->a = ps_lstnew(bin[i], index[i]);
 		while (i < all->len - 1)
@@ -27,6 +26,23 @@ void	fill_stack_a(t_all *all, char **bin, int *index)
 			ps_lstadd_back(&all->a, ps_lstnew(bin[i], index[i]));
 		}
 		print_stacks(all->a);
+	}
+}
+
+void	fill_stack_aux(t_all *all, char **bin, int *index)
+{
+	int	i;
+
+	if (all->len)
+	{
+		i = 0;
+		all->aux = ps_lstnew(bin[i], index[i]);
+		while (i < all->len - 1)
+		{
+			i++;
+			ps_lstadd_back(&all->aux, ps_lstnew(bin[i], index[i]));
+		}
+		print_stacks(all->aux);
 	}
 }
 
@@ -42,7 +58,7 @@ void	print_stacks(t_stack *stack)
 	tmp = stack;
 	while (tmp)
 	{
-//		printf("%s ", tmp->content);
+//		printf("%d ", tmp->index);
 		tmp = tmp->next;
 	}
 //	printf("\n");

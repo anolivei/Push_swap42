@@ -6,7 +6,7 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 20:08:36 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/23 23:56:54 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/07/24 16:52:37 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ typedef struct s_all
 {
 	t_stack	*a;
 	t_stack	*b;
-	t_stack	*sort;
-	t_stack	*aux_sort;
+	t_stack *aux;
+	t_stack *aux_b;
 	int		limit;
 	char	**bin;
 	int		*num;
@@ -53,6 +53,7 @@ void	transform_args(int argc, char **argv, int *num);
 
 void	init_struct(t_all *all, int *num, int argc);
 void	fill_stack_a(t_all *all, char **bin, int *index);
+void	fill_stack_aux(t_all *all, char **bin, int *index);
 
 void	exit_error(void);
 
@@ -86,11 +87,12 @@ void	rra(t_all *all);
 void	rrb(t_all *all);
 void	rrr(t_all *all);
 
-//void	push(t_all *all, int new_content);
 int		*quick_sort(int len, int *num);
 int		*get_index(int len, int *num, int *cpy);
 int		*link_index(int len, int *num);
 
-void	push_swap(t_all *all);
+void	push_swap(t_all *all, int *index);
+void	short_push_swap(t_all *all, int *index);
+void	long_push_swap(t_all *all);
 
 #endif
