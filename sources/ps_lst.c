@@ -6,20 +6,21 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/17 01:40:32 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/20 00:38:45 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/07/23 23:26:16 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_stack	*ps_lstnew(int content)
+t_stack	*ps_lstnew(char *bin, int index)
 {
 	t_stack	*new_element;
 
 	new_element = (t_stack *)malloc(sizeof(t_stack));
 	if (new_element == NULL)
 		return (NULL);
-	new_element->content = content;
+	new_element->content = bin;
+	new_element->index = index;
 	new_element->next = NULL;
 	return (new_element);
 }

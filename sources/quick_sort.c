@@ -6,20 +6,20 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 22:43:44 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/21 23:24:39 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/07/24 00:43:49 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	push(t_all *all, int new_content)
+/*void	push(t_all *all, int new_content)
 {	
 	all->sort = all->a;
 	all->aux_sort = ps_lstnew(new_content);
 	all->aux_sort->next = all->sort;
 	all->sort = all->aux_sort;
 	print_stacks(all->sort);
-}
+}*/
 
 static int	*cpy_vector(int len, int *num)
 {
@@ -87,6 +87,6 @@ int	*link_index(int len, int *num)
 	cpy = quick_sort(len, num);
 	index = get_index(len, num, cpy);
 	free(cpy);
-	print_vectors(len, index);
+//	print_vectors(len, index);
 	return (index);
 }

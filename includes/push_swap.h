@@ -6,7 +6,7 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 20:08:36 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/23 01:03:28 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/07/23 23:56:54 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@
 
 typedef struct s_stack
 {
-	int					content;
+	char				*content;
+	int					index;
 	struct s_stack		*next;
 }						t_stack;
 
@@ -34,7 +35,7 @@ typedef struct s_all
 	t_stack	*b;
 	t_stack	*sort;
 	t_stack	*aux_sort;
-
+	int		limit;
 	char	**bin;
 	int		*num;
 	int		len;
@@ -51,11 +52,11 @@ bool	array_is_sorted(int argc, int *num);
 void	transform_args(int argc, char **argv, int *num);
 
 void	init_struct(t_all *all, int *num, int argc);
-void	fill_stack_a(t_all *all);
+void	fill_stack_a(t_all *all, char **bin, int *index);
 
 void	exit_error(void);
 
-t_stack	*ps_lstnew(int content);
+t_stack	*ps_lstnew(char *bin, int index);
 void	ps_lstadd_back(t_stack **lst, t_stack *next);
 t_stack	*ps_lstlast(t_stack *lst);
 void	ps_lstdelone(t_stack *lst, void (*del)(void *));
@@ -85,9 +86,11 @@ void	rra(t_all *all);
 void	rrb(t_all *all);
 void	rrr(t_all *all);
 
-void	push(t_all *all, int new_content);
+//void	push(t_all *all, int new_content);
 int		*quick_sort(int len, int *num);
 int		*get_index(int len, int *num, int *cpy);
 int		*link_index(int len, int *num);
+
+void	push_swap(t_all *all);
 
 #endif

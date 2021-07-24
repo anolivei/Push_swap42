@@ -6,7 +6,7 @@
 #    By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/19 21:21:36 by anolivei          #+#    #+#              #
-#    Updated: 2021/07/22 00:28:29 by anolivei         ###   ########.fr        #
+#    Updated: 2021/07/23 23:57:13 by anolivei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,7 @@ SRC =	$(SRC_DIR)/main.c \
 		$(SRC_DIR)/rra.c \
 		$(SRC_DIR)/rrb.c \
 		$(SRC_DIR)/rrr.c \
+		$(SRC_DIR)/push_swap.c \
 		$(SRC_DIR)/exit.c
 
 OBJ = $(patsubst $(SRC_DIR)%.c, $(OBJ_DIR)%.o, $(SRC))

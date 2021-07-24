@@ -1,29 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sb.c                                               :+:      :+:    :+:   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/01 19:42:25 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/24 00:42:08 by anolivei         ###   ########.fr       */
+/*   Created: 2021/07/23 23:46:40 by anolivei          #+#    #+#             */
+/*   Updated: 2021/07/24 01:25:34 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+# include "push_swap.h"
 
-void	sb(t_all *all)
+void	push_swap(t_all *all)
 {
-	char	*a;
-	char	*b;
+	int i;
 
-	if (all->b)
+	all->limit = find_limit(all->len);
+	i = 0;
+	while (all->limit >= 0)
 	{
-		a = all->b->content;
-		b = all->b->next->content;
-		all->b->content = b;
-		all->b->next->content = a;
-		ft_putstr_fd("sb\n", 1);
-	//	print_stacks(all->b);
+		while(i < all->len)
+		{
+			if (all->a->content[all->limit] == '0')
+				pb(all);
+			else
+				ra(all);
+			i++;
+		}
+		while (all->b)
+			pa(all);
+		all->limit--;
+		i = 0;
 	}
+//	printf("A\n");
+//	print_stacks(all->a);
+//	printf("B\n");
+//	print_stacks(all->b);
 }

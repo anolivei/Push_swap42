@@ -6,12 +6,13 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 19:07:27 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/23 01:08:58 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/07/24 00:30:26 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+/*
 static void	tests(t_all *all)
 {
 	sa(all);
@@ -26,7 +27,7 @@ static void	tests(t_all *all)
 	pa(all);
 	pa(all);
 	pb(all);
-}
+}*/
 
 static void	freeing(t_all *all, int *num, int *index, char **bin)
 {
@@ -69,8 +70,9 @@ int	main(int argc, char **argv)
 	index = link_index(argc, num);
 	bin = string_bin(argc, index);
 	init_struct(&all, num, argc);
-	fill_stack_a(&all);
-	tests(&all);
+	fill_stack_a(&all, bin, index);
+//	tests(&all);
+	push_swap(&all);
 	freeing(&all, num, index, bin);
 	return (true);
 }

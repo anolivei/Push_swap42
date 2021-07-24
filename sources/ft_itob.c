@@ -6,7 +6,7 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/21 23:42:35 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/23 01:04:08 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/07/24 00:44:49 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ char	*ft_itob(int len, int num)
 		c--;
 	}
 	*(p + t) = '\0';
-	printf("BIN %s\n", p);
+//	printf("BIN %s\n", p);
 	return (p);
 }
 
@@ -68,6 +68,6 @@ char	**string_bin(int len, int *num)
 		string_bin[i] = ft_itob(len, num[i]);
 		i++;
 	}
-	print_char_vectors(len, string_bin);
+//	print_char_vectors(len, string_bin);
 	return (string_bin);
 }
