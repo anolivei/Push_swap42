@@ -1,29 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sb.c                                               :+:      :+:    :+:   */
+/*   push_swap_long.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/06/01 19:42:25 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/24 00:42:08 by anolivei         ###   ########.fr       */
+/*   Created: 2021/07/23 23:46:40 by anolivei          #+#    #+#             */
+/*   Updated: 2021/07/24 18:55:24 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sb(t_all *all)
-{
-	char	*a;
-	char	*b;
+/*
+** Sort a stack with more than 5 numbers
+*/
 
-	if (all->b)
+void	long_push_swap(t_all *all)
+{
+	int	i;
+
+	all->limit = find_limit(all->len);
+	i = 0;
+	while (all->limit >= 0)
 	{
-		a = all->b->content;
-		b = all->b->next->content;
-		all->b->content = b;
-		all->b->next->content = a;
-		ft_putstr_fd("sb\n", 1);
-	//	print_stacks(all->b);
+		while (i < all->len)
+		{
+			if (all->a->content[all->limit] == '0')
+				pb(all);
+			else
+				ra(all);
+			i++;
+		}
+		while (all->b)
+			pa(all);
+		all->limit--;
+		i = 0;
 	}
 }

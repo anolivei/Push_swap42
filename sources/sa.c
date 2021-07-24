@@ -6,11 +6,15 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/01 19:42:09 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/24 13:06:05 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/07/24 18:51:20 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+/*
+** Swap the top two numbers in A
+*/
 
 void	sa(t_all *all)
 {

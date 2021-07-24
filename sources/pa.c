@@ -6,11 +6,15 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 00:13:12 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/24 16:45:50 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/07/24 18:53:25 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+/*
+** Top number in B goes to top of A
+*/
 
 void	pa(t_all *all)
 {

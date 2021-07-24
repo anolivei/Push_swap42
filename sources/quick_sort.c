@@ -6,7 +6,7 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/20 22:43:44 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/24 11:36:01 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/07/24 18:19:36 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static int	*cpy_vector(int len, int *num)
 
 	cpy = malloc((sizeof(int) * len) + 1);
 	if (!cpy)
-		exit(false);
+		exit(EXIT_FAILURE);
 	i = 0;
 	while (i < len)
 	{
@@ -78,6 +78,5 @@ int	*link_index(int len, int *num)
 	cpy = quick_sort(len, num);
 	index = get_index(len, num, cpy);
 	free(cpy);
-//	print_vectors(len, index);
 	return (index);
 }

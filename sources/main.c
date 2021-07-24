@@ -6,47 +6,11 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/26 19:07:27 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/24 16:40:50 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/07/24 19:06:07 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-/*
-static void	tests(t_all *all)
-{
-	sa(all);
-	ss(all);
-	sb(all);
-	ra(all);
-	rr(all);
-	rra(all);
-	rrb(all);
-	rb(all);
-	rrr(all);
-	pa(all);
-	pa(all);
-	pb(all);
-}*/
-
-static void	freeing(t_all *all, int *num, int *index, char **bin)
-{
-	int	i;
-
-	free(index);
-	index = NULL;
-	free(num);
-	num = NULL;
-	ps_lstclear(&all->a);
-	ps_lstclear(&all->b);
-	i = 0;
-	while (i < all->len)
-	{
-		free(bin[i]);
-		i++;
-	}
-	free(bin);
-}
 
 int	main(int argc, char **argv)
 {
@@ -61,7 +25,7 @@ int	main(int argc, char **argv)
 	argv++;
 	num = malloc(sizeof(int) * argc);
 	if (!num)
-		return (false);
+		exit(EXIT_FAILURE);
 	validate_args(argc, argv);
 	transform_args(argc, argv, num);
 	check_duplicates(argc, num);
@@ -69,11 +33,40 @@ int	main(int argc, char **argv)
 		exit(true);
 	index = link_index(argc, num);
 	bin = string_bin(argc, index);
-	init_struct(&all, num, argc);
+	init_struct(&all, argc);
 	fill_stack_a(&all, bin, index);
-	fill_stack_aux(&all, bin, index);
-//	tests(&all);
 	push_swap(&all, index);
 	freeing(&all, num, index, bin);
 	return (false);
+}
+
+void	init_struct(t_all *all, int argc)
+{
+	all->a = NULL;
+	all->b = NULL;
+	all->len = argc;
+}
+
+void	fill_stack_a(t_all *all, char **bin, int *index)
+{
+	int	i;
+
+	if (all->len)
+	{
+		i = 0;
+		all->a = ps_lstnew(bin[i], index[i]);
+		while (i < all->len - 1)
+		{
+			i++;
+			ps_lstadd_back(&all->a, ps_lstnew(bin[i], index[i]));
+		}
+	}
+}
+
+void	push_swap(t_all *all, int *index)
+{
+	if (all->len <= 5)
+		short_push_swap(all, index);
+	else
+		long_push_swap(all);
 }

@@ -6,11 +6,15 @@
 /*   By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/18 15:46:36 by anolivei          #+#    #+#             */
-/*   Updated: 2021/07/24 00:42:29 by anolivei         ###   ########.fr       */
+/*   Updated: 2021/07/24 18:52:10 by anolivei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+/*
+** Bottom number in A goes to top of A
+*/
 
 void	rra(t_all *all)
 {
@@ -30,6 +34,5 @@ void	rra(t_all *all)
 		last->next = all->a;
 		all->a = last;
 		ft_putstr_fd("rra\n", 1);
-	//	print_stacks(all->a);
 	}
 }

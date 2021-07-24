@@ -6,7 +6,7 @@
 #    By: anolivei <anolivei@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/19 21:21:36 by anolivei          #+#    #+#              #
-#    Updated: 2021/07/23 23:57:13 by anolivei         ###   ########.fr        #
+#    Updated: 2021/07/24 19:08:17 by anolivei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,23 +19,16 @@ LIBFT = $(LIBFT_DIR)/libft.a
 SRC =	$(SRC_DIR)/main.c \
 		$(SRC_DIR)/check_args.c \
 		$(SRC_DIR)/is_integer.c \
-		$(SRC_DIR)/init_struct.c \
-		$(SRC_DIR)/fill_stack_a.c \
 		$(SRC_DIR)/ps_lst.c \
 		$(SRC_DIR)/quick_sort.c \
 		$(SRC_DIR)/ft_itob.c \
 		$(SRC_DIR)/pa.c \
 		$(SRC_DIR)/pb.c \
 		$(SRC_DIR)/sa.c \
-		$(SRC_DIR)/sb.c \
-		$(SRC_DIR)/ss.c \
 		$(SRC_DIR)/ra.c \
-		$(SRC_DIR)/rb.c \
-		$(SRC_DIR)/rr.c \
 		$(SRC_DIR)/rra.c \
-		$(SRC_DIR)/rrb.c \
-		$(SRC_DIR)/rrr.c \
-		$(SRC_DIR)/push_swap.c \
+		$(SRC_DIR)/push_swap_short.c \
+		$(SRC_DIR)/push_swap_long.c \
 		$(SRC_DIR)/exit.c
 
 OBJ = $(patsubst $(SRC_DIR)%.c, $(OBJ_DIR)%.o, $(SRC))
