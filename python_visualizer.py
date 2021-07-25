@@ -65,7 +65,7 @@ class PsGui:
         self.ResetCtl = Button(self.butframe, text="R", command=self.reset)
         self.ResetCtl.pack(side=LEFT)
         self.listbox = Listbox(self.toolframe, bg='black', fg='light cyan',
-                               font=("monospace", 12), relief=FLAT)
+                                font=("monospace", 12), relief=FLAT)
         self.listbox.pack(fill=BOTH, expand=1)
         for cmd in self.cmds:
             self.listbox.insert(END, cmd)
@@ -186,7 +186,7 @@ class PsGui:
             for vala in a_val:
                 rects.append(self.can.create_rectangle(0, vi,
                                                        10 + vala * (hw - 100), vi + wh / hm,
-                                                       fill=self.set_color(vala), outline=""))
+                                                        fill=self.set_color(vala), outline=""))
                 vi += wh / hm
         vi = 0
         if len(self.pile_b) > 0:
@@ -194,7 +194,7 @@ class PsGui:
             for valb in b_val:
                 rects.append(self.can.create_rectangle(hw, vi,
                                                        hw + 10 + valb * (hw - 100), vi + wh / hm,
-                                                       fill=self.set_color(valb), outline=""))
+                                                        fill=self.set_color(valb), outline=""))
                 vi += wh / hm
 
     def launch(self):

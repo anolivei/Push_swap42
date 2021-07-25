@@ -60,7 +60,7 @@ Because Swap_push isn’t as natural
 - [Radix Sort](https://medium.com/nerd-for-tech/push-swap-tutorial-fa746e6aba1e) (I used this algorithm in my project)
 
 ## Functions ##
-Only the following functions are allowed to be used int this project:
+Only the following functions are allowed to be used in this project:
 - write
 - read
 - malloc
@@ -98,8 +98,10 @@ ARG="4 67 3 87 23"; ./push_swap $ARG | ./checker_Mac $ARG
 bash lfrasson_tester.sh
 
 # push_swap visualizer
-python3 python_visualizer.py `ruby -e "puts (-200..200).to_a.shuffle.join(' ')"`
+python3 python_visualizer.py `ruby -e "puts (-50..50).to_a.shuffle.join(' ')"`
 ```
+
+<img width="500px" src="./images/push_swap.gif?raw=true" />
 
 &#xa0;
 <a href="#top">Back to top</a>
